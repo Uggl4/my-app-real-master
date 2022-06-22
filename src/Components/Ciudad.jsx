@@ -1,44 +1,31 @@
-import React from "react";
-import { Card } from 'semantic-ui-react';
+import React from 'react'
+import { Card, Container, Icon, Image } from 'semantic-ui-react'
 
-export const Ciudad = () => {
-  return (
-    <>
-      Ciudad
-      <Card.Group>
-        <Card>
-          <Card.Content>
-            <Card.Header>Matthew Harris</Card.Header>
-            <Card.Meta>Co-Worker</Card.Meta>
-            <Card.Description>
-              Matthew is a pianist living in Nashville.
-            </Card.Description>
-          </Card.Content>
-        </Card>
+const styleLink = document.createElement("link");
+styleLink.rel = "stylesheet";
+styleLink.href = "https://cdn.jsdelivr.net/npm/semantic-ui/dist/semantic.min.css";
+document.head.appendChild(styleLink)
 
-        <Card>
-          <Card.Content>
-            <Card.Header content="Jake Smith" />
-            <Card.Meta content="Musicians" />
-            <Card.Description content="Jake is a drummer living in New York." />
-          </Card.Content>
-        </Card>
-
-        <Card>
-          <Card.Content
-            header="Elliot Baker"
-            meta="Friend"
-            description="Elliot is a music producer living in Chicago."
-          />
-        </Card>
-
-        <Card
-          header="Jenny Hess"
-          meta="Friend"
-          description="Jenny is a student studying Media Management at the New School"
-        />
-      </Card.Group>
-      
-    </>
-  );
-};
+export const Ciudad = () => (
+  <>
+  <Container style={{ margin: 20 }}>
+    <Card>
+    <Image src='https://react.semantic-ui.com/images/avatar/large/daniel.jpg' wrapped ui={false} />
+    <Card.Content>
+      <Card.Header>Daniel</Card.Header>
+      <Card.Meta>Joined in 2016</Card.Meta>
+      <Card.Description>
+        Daniel is a comedian living in Nashville.
+      </Card.Description>
+    </Card.Content>
+    <Card.Content extra>
+      <a>
+        <Icon name='user' />
+        10 Friends
+      </a>
+    </Card.Content>
+  </Card>
+</Container>
+</>
+)
+export default Ciudad
